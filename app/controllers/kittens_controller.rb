@@ -38,6 +38,11 @@ class KittensController < ApplicationController
   end
 
   def destroy
+    @kitten = Kitten.find(paramsp[:id])
+    @kitten.destroy
+    redirect_to kittens_path, notice: 'Kitten successfully deleted'
+
+
   end
 
   def kitten_params

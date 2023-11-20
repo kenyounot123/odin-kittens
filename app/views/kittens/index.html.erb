@@ -2,12 +2,15 @@
 <div class="kitten-pics-container">
   <ul>
     <% @kittens.each do |kitten| %>
-      <li><%= kitten %></li>
       <li><%= kitten.age %></li>
       <li><%= kitten.name %></li>
       <li><%= kitten.cuteness %></li>
       <li><%= kitten.softness %></li>
-    <% end %>
+      <li><%= link_to "Go to kitten", kitten_path(kitten) %></li>
+      <li><%= link_to "Delete kitten", kitten_path(kitten), data: { turbo_method: "delete" } %></li>
+      <% end %>
   </ul>
 </div>
+<%= link_to "Create new kitten", new_kitten_path %>
+
 
