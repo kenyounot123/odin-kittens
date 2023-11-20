@@ -1,0 +1,13 @@
+<h1>All Kittens</h1>
+<div class="kitten-pics-container">
+  <ul>
+    <% @kittens.each do |kitten| %>
+      <li><%= kitten %></li>
+      <li><%= kitten.age %></li>
+      <li><%= kitten.name %></li>
+      <li><%= kitten.cuteness %></li>
+      <li><%= kitten.softness %></li>
+    <% end %>
+  </ul>
+</div>
+
